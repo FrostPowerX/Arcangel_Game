@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhqk21ty3aehy"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_5bg3o"]
+[ext_resource type="Texture2D" uid="uid://xj1731r0jicw" path="res://Assets/Tanks.png" id="2_revi1"]
+[ext_resource type="Script" path="res://Scenes/Turret.gd" id="3_1dloa"]
+[ext_resource type="Texture2D" uid="uid://c3wqboyt71syu" path="res://Assets/Tanks_Atlas_test.png" id="3_ijxu8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu8gf"]
+atlas = ExtResource("2_revi1")
+region = Rect2(641, 922, 343, 388)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nbpi3"]
+size = Vector2(86, 110)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_5bg3o")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, -0.342001)
+scale = Vector2(0.244186, 0.2595)
+texture = SubResource("AtlasTexture_iu8gf")
+
+[node name="Turret" type="Node2D" parent="." node_paths=PackedStringArray("Cannon1", "Cannon2")]
+script = ExtResource("3_1dloa")
+Cannon1 = NodePath("Cannon1")
+Cannon2 = NodePath("Cannon2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Turret"]
+position = Vector2(1.90735e-06, -0.342001)
+scale = Vector2(0.244186, 0.2595)
+texture = ExtResource("3_ijxu8")
+region_enabled = true
+region_rect = Rect2(1088, 864, 164, 356)
+
+[node name="Cannon1" type="Node2D" parent="Turret"]
+position = Vector2(7, -59)
+
+[node name="Cannon2" type="Node2D" parent="Turret"]
+position = Vector2(-7, -59)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_nbpi3")
