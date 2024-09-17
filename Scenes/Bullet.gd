@@ -1,3 +1,5 @@
+extends Node2D
+
 var rightMuzzlePos : Transform2D
 var leftMuzzlePos : Transform2D
 var bulletDirection : Vector2
