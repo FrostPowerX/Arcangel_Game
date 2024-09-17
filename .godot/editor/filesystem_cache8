@@ -1,21 +1,21 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1726596148
+::res://::1726597911
 icon.svg::CompressedTexture2D::7320627851566884898::1726595988::1726596151::1::::<><>::
-::res://Assets/::1726595988
+::res://Assets/::1726596153
 Level.png::CompressedTexture2D::4821776947866231672::1726595988::1726596152::1::::<><>::
 Tanks.png::CompressedTexture2D::1634560102303060082::1726595988::1726596153::1::::<><>::
 Tanks_Atlas_test.png::CompressedTexture2D::6784519330827879612::1726595988::1726596153::1::::<><>::
-::res://Devlog/::1726595988
+::res://Devlog/::1726596152
 Captura de pantalla (1).png::CompressedTexture2D::7035731686815043030::1726595988::1726596152::1::::<><>::
 Captura de pantalla (2).png::CompressedTexture2D::4775326318829815448::1726595988::1726596152::1::::<><>::
 Captura de pantalla (3).png::CompressedTexture2D::6625440845708522965::1726595988::1726596152::1::::<><>::
 ::res://resources/::1726595988
-::res://resources/kenney_top-down-tanks-redux/::1726595988
+::res://resources/kenney_top-down-tanks-redux/::1726596151
 License.txt::TextFile::-1::1726595988::0::1::::<><>::
 Preview.png::CompressedTexture2D::7942297513709049388::1726595988::1726596151::1::::<><>::
 Sample.png::CompressedTexture2D::1184173334504539826::1726595988::1726596151::1::::<><>::
 ::res://resources/kenney_top-down-tanks-redux/PNG/::1726595988
-::res://resources/kenney_top-down-tanks-redux/PNG/Default size/::1726595988
+::res://resources/kenney_top-down-tanks-redux/PNG/Default size/::1726596152
 barrelBlack_side.png::CompressedTexture2D::5968643831393393863::1726595988::1726596152::1::::<><>::
 barrelBlack_top.png::CompressedTexture2D::656861907315921565::1726595988::1726596152::1::::<><>::
 barrelGreen_side.png::CompressedTexture2D::2919365701365897304::1726595988::1726596152::1::::<><>::
@@ -203,7 +203,7 @@ treeGreen_small.png::CompressedTexture2D::549031713607263228::1726595988::172659
 treeGreen_twigs.png::CompressedTexture2D::4410862303078414752::1726595988::1726596152::1::::<><>::
 wireCrooked.png::CompressedTexture2D::2488602433257104388::1726595988::1726596152::1::::<><>::
 wireStraight.png::CompressedTexture2D::3723722867120500020::1726595988::1726596152::1::::<><>::
-::res://resources/kenney_top-down-tanks-redux/PNG/Retina/::1726595988
+::res://resources/kenney_top-down-tanks-redux/PNG/Retina/::1726596152
 barrelBlack_side.png::CompressedTexture2D::9003979744941578629::1726595988::1726596152::1::::<><>::
 barrelBlack_top.png::CompressedTexture2D::1581827904569710545::1726595988::1726596152::1::::<><>::
 barrelGreen_side.png::CompressedTexture2D::3328892741331909117::1726595988::1726596151::1::::<><>::
@@ -391,7 +391,7 @@ treeGreen_small.png::CompressedTexture2D::2428276874391082413::1726595988::17265
 treeGreen_twigs.png::CompressedTexture2D::5247856853546154003::1726595988::1726596151::1::::<><>::
 wireCrooked.png::CompressedTexture2D::6638047825256276030::1726595988::1726596151::1::::<><>::
 wireStraight.png::CompressedTexture2D::623300076951782033::1726595988::1726596151::1::::<><>::
-::res://resources/kenney_top-down-tanks-redux/Spritesheet/::1726595988
+::res://resources/kenney_top-down-tanks-redux/Spritesheet/::1726596151
 allSprites_default.png::CompressedTexture2D::5112437050788371444::1726595988::1726596151::1::::<><>::
 allSprites_default.xml::TextFile::-1::1726595988::0::1::::<><>::
 allSprites_retina.png::CompressedTexture2D::8236506533905608296::1726595988::1726596151::1::::<><>::
@@ -400,28 +400,28 @@ onlyObjects_default.png::CompressedTexture2D::5969330043186150768::1726595988::1
 onlyObjects_default.xml::TextFile::-1::1726595988::0::1::::<><>::
 onlyObjects_retina.png::CompressedTexture2D::6845644229509746545::1726595988::1726596151::1::::<><>::
 onlyObjects_retina.xml::TextFile::-1::1726595988::0::1::::<><>::
-::res://resources/kenney_top-down-tanks-redux/Tilesheet/::1726595988
+::res://resources/kenney_top-down-tanks-redux/Tilesheet/::1726596151
 terrainTiles_default.png::CompressedTexture2D::1333954056944919932::1726595988::1726596151::1::::<><>::
 terrainTiles_retina.png::CompressedTexture2D::7421973866209889683::1726595988::1726596151::1::::<><>::
-::res://resources/kenney_top-down-tanks-redux/Vector/::1726595988
+::res://resources/kenney_top-down-tanks-redux/Vector/::1726596151
 topdownTanks_vector.svg::CompressedTexture2D::958125573943656524::1726595988::1726596151::1::::<><>::
-::res://Scenes/::1726595988
-Bullet.gd::GDScript::-1::1726595988::0::1::::<>RefCounted<>::
-level_bounds.tscn::PackedScene::4536537434136800362::1726595988::0::1::::<><>::res://Scripts/level_bounds.gd<>uid://cen4rggqn8jpn::::res://Scenes/wall.tscn<>res://Scripts/OnCameraCheck.gd<>uid://c7y3qkpdd2xa::::res://Tilemaps/metal_level.tres
-menu.tscn::PackedScene::395007963943818643::1726595988::0::1::::<><>::res://Scripts/menu.gd
-obstacle.tscn::PackedScene::8600473998100736321::1726595988::0::1::::<><>::res://Scripts/obstacle.gd<>uid://caxx7x58ndva3::::res://Assets/Level.png
-player.tscn::PackedScene::7684270783059843222::1726595988::0::1::::<><>::res://Scripts/player.gd<>uid://xj1731r0jicw::::res://Assets/Tanks.png<>res://Scenes/Turret.gd<>uid://c3wqboyt71syu::::res://Assets/Tanks_Atlas_test.png
-player_cam.tscn::PackedScene::6893395944498668178::1726595988::0::1::::<><>::res://Scripts/PlayerCam.gd
-test.tscn::PackedScene::1829719605480403967::1726595988::0::1::::<><>::uid://dhqk21ty3aehy::::res://Scenes/player.tscn<>uid://c7y3qkpdd2xa::::res://Tilemaps/metal_level.tres<>uid://dusesybhck4nd::::res://Scenes/obstacle.tscn<>uid://c5hhhva1lacp3::::res://Scenes/player_cam.tscn<>uid://b5vsdxycjr6ig::::res://Scenes/level_bounds.tscn<>res://Scenes/Bullet.gd
+::res://Scenes/::1726597838
+Bullet.gd::GDScript::-1::1726596867::0::1::::<>Node2D<>::
+level_bounds.tscn::PackedScene::4536537434136800362::1726597838::0::1::::<><>::res://Scripts/level_bounds.gd<>uid://cen4rggqn8jpn::::res://Scenes/wall.tscn<>res://Scripts/OnCameraCheck.gd
+menu.tscn::PackedScene::395007963943818643::1726597838::0::1::::<><>::res://Scripts/menu.gd
+obstacle.tscn::PackedScene::8600473998100736321::1726597838::0::1::::<><>::res://Scripts/obstacle.gd<>uid://caxx7x58ndva3::::res://Assets/Level.png
+player.tscn::PackedScene::7684270783059843222::1726597838::0::1::::<><>::res://Scripts/player.gd<>uid://xj1731r0jicw::::res://Assets/Tanks.png<>res://Scenes/Turret.gd<>uid://c3wqboyt71syu::::res://Assets/Tanks_Atlas_test.png
+player_cam.tscn::PackedScene::6893395944498668178::1726597838::0::1::::<><>::res://Scripts/PlayerCam.gd
+test.tscn::PackedScene::1829719605480403967::1726597838::0::1::::<><>::uid://dhqk21ty3aehy::::res://Scenes/player.tscn<>uid://c7y3qkpdd2xa::::res://Tilemaps/metal_level.tres<>uid://dusesybhck4nd::::res://Scenes/obstacle.tscn<>uid://c5hhhva1lacp3::::res://Scenes/player_cam.tscn<>uid://b5vsdxycjr6ig::::res://Scenes/level_bounds.tscn<>res://Scenes/Bullet.gd
 Turret.gd::GDScript::-1::1726595988::0::1::::<>Node2D<>::
-wall.tscn::PackedScene::5082225129182293895::1726595988::0::1::::<><>::uid://caxx7x58ndva3::::res://Assets/Level.png
-::res://Scripts/::1726595988
+wall.tscn::PackedScene::5082225129182293895::1726597838::0::1::::<><>::uid://caxx7x58ndva3::::res://Assets/Level.png
+::res://Scripts/::1726596861
 CameraCheck.gd::GDScript::-1::1726595988::0::1::::<>VisibleOnScreenNotifier2D<>::
 level_bounds.gd::GDScript::-1::1726595988::0::1::::<>Node2D<>::
 menu.gd::GDScript::-1::1726595988::0::1::::<>Control<>::
 obstacle.gd::GDScript::-1::1726595988::0::1::::<>Area2D<>::
 OnCameraCheck.gd::GDScript::-1::1726595988::0::1::::<>VisibleOnScreenNotifier2D<>::
 player.gd::GDScript::-1::1726595988::0::1::::<>CharacterBody2D<>::
-PlayerCam.gd::GDScript::-1::1726595988::0::1::::<>Camera2D<>::
-::res://Tilemaps/::1726595988
-metal_level.tres::TileSet::207945841969046562::1726595988::0::1::::<><>::uid://caxx7x58ndva3::::res://Assets/Level.png
+PlayerCam.gd::GDScript::-1::1726596861::0::1::::<>Camera2D<>::
+::res://Tilemaps/::1726596330
+metal_level.tres::TileSet::207945841969046562::1726596330::0::1::::<><>::uid://caxx7x58ndva3::::res://Assets/Level.png

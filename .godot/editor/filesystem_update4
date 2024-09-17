@@ -6,5 +6,3 @@ res://Scenes/player.tscn
 res://Scenes/player_cam.tscn
 res://Scenes/test.tscn
 res://Scenes/wall.tscn
-res://Scenes/Bullet.gd
-res://Scripts/PlayerCam.gd
