@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhqk21ty3aehy" path="res://Scenes/player.tscn" id="1_x0www"]
 [ext_resource type="PackedScene" uid="uid://c5hhhva1lacp3" path="res://Scenes/player_cam.tscn" id="2_n8r4t"]
-[ext_resource type="PackedScene" uid="uid://b1th7hougk14t" path="res://Scenes/Enemy.tscn" id="3_kaeas"]
+[ext_resource type="PackedScene" uid="uid://7rr23we13lef" path="res://Scenes/Enemy.tscn" id="3_kaeas"]
 
 [node name="Test" type="Node2D"]
 

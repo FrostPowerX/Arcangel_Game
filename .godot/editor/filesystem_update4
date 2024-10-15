@@ -3,10 +3,7 @@ res://Scripts/player.gd
 res://Scenes/obstacle.tscn
 res://Scenes/player.tscn
 res://Scenes/player_cam.tscn
-res://Scenes/Test.tscn
 res://Scenes/Enemy.tscn
-res://Scripts/Enemy.gd
-res://Scripts/Turret.gd
 res://Scenes/Turret.tscn
-res://Scripts/HealthSystem.gd
+res://Tilemaps/metal_level.tres
 res://Scripts/PlayerCam.gd
