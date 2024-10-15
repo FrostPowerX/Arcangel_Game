@@ -1,39 +1,12 @@
-# Godot 4+ specific ignores
-.godot/*
-!.godot/uid_cache.bin
-!.godot/extension_list.cfg
+# Godot-specific ignores
+.import/
+export.cfg
+export_presets.cfg
 
-android/
-*.tmp
-*.import
-*.exe
-*.pck
-*.zip
-lang/*.translation
-.vscode/
-.idea
-.cache
+# Imported translations (automatically generated from CSV files)
+*.translation
 
-# exports
-build/
-docs/
+# Mono-specific ignores
+.mono/
+data_*/
 
-# game install dir
-godot/
-
-# extensions stuff
-bin/*.so
-bin/*.dll
-bin/*.dll.a
-bin/*.dylib
-bin/*.framework
-
-extensions/build*
-extensions/cross_compile_stuff/*
-
-# Mac
-.DS_Store
-
-# aseprite stuff
-utility_scripts/aseprite
-utility_scripts/skia
