@@ -5,6 +5,7 @@ extends Node2D
 @export var bulletSpeed = 1000
 
 @onready var spriteCannon = $Sprite2D
+
 var origin : Vector2 = Vector2.ZERO 
 var bullet = preload("res://Scenes/bullet.tscn")
 
@@ -29,8 +30,8 @@ func getFireInput():
 		var bulletInstance2 = bullet.instantiate()
 		
 		# Obtengo la direccion de disparo y seteo:
-		# Direccion, velocidad y posicion
 		var direction = global_position.direction_to(get_global_mouse_position())
+		# Direccion, velocidad y posicion
 		bulletInstance1.initializeBullet(direction, bulletSpeed, cannon1.global_position)
 		bulletInstance2.initializeBullet(direction, bulletSpeed, cannon2.global_position)
 		

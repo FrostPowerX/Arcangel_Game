@@ -26,8 +26,6 @@ func Movement(_delta):
 	
 	velocity = Vector2(directionX * speed, -useVelMulti * speed)
 	
-	
-	#print(velocity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):

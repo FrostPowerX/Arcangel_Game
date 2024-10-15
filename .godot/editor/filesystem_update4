@@ -1,3 +1,12 @@
-res://Scenes/test.tscn
+res://Scenes/menu.tscn
 res://Tilemaps/metal_level.tres
+res://Scripts/Turret.gd
+res://Scenes/level_bounds.tscn
+res://Scenes/obstacle.tscn
+res://Scenes/player.tscn
+res://Scenes/test.tscn
+res://Scenes/wall.tscn
+res://Scenes/bullet.tscn
+res://Scenes/enemy_1.tscn
 res://Scripts/enemy_1.gd
+res://Scripts/player.gd
