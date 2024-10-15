@@ -1,56 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://1clhkby2vmup"]
+[gd_scene load_steps=4 format=3 uid="uid://dmbjnjbdpko1c"]
 
-[ext_resource type="PackedScene" uid="uid://dhqk21ty3aehy" path="res://Scenes/player.tscn" id="1_dhslj"]
-[ext_resource type="PackedScene" uid="uid://dusesybhck4nd" path="res://Scenes/obstacle.tscn" id="2_ar3li"]
-[ext_resource type="PackedScene" uid="uid://c5hhhva1lacp3" path="res://Scenes/player_cam.tscn" id="4_2agj3"]
-[ext_resource type="PackedScene" uid="uid://b5vsdxycjr6ig" path="res://Scenes/level_bounds.tscn" id="6_oaxxt"]
-[ext_resource type="Script" path="res://Scenes/Bullet.gd" id="6_xy651"]
+[ext_resource type="PackedScene" uid="uid://dhqk21ty3aehy" path="res://Scenes/player.tscn" id="1_x0www"]
+[ext_resource type="PackedScene" uid="uid://c5hhhva1lacp3" path="res://Scenes/player_cam.tscn" id="2_n8r4t"]
+[ext_resource type="PackedScene" uid="uid://b1th7hougk14t" path="res://Scenes/Enemy.tscn" id="3_kaeas"]
 
-[node name="Node" type="Node"]
+[node name="Test" type="Node2D"]
 
-[node name="PlayerCam" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_2agj3")]
-position = Vector2(-4, -112)
-target = NodePath("../Player")
+[node name="PlayerCam" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_n8r4t")]
+target = NodePath("../CharacterBody2D")
 
-[node name="LevelBounds1" parent="." node_paths=PackedStringArray("nextSection") instance=ExtResource("6_oaxxt")]
-nextSection = NodePath("../LevelBounds3")
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_x0www")]
 
-[node name="Obstacle" parent="LevelBounds1" instance=ExtResource("2_ar3li")]
-position = Vector2(-319, -168)
-
-[node name="Obstacle7" parent="LevelBounds1" node_paths=PackedStringArray("collider") instance=ExtResource("2_ar3li")]
-position = Vector2(-10, 321)
-collider = NodePath("../../LevelBounds2/Obstacle3/CollisionShape2D")
-
-[node name="LevelBounds2" parent="." node_paths=PackedStringArray("nextSection") instance=ExtResource("6_oaxxt")]
-position = Vector2(0, -1230)
-nextSection = NodePath("../LevelBounds1")
-
-[node name="Obstacle2" parent="LevelBounds2" instance=ExtResource("2_ar3li")]
-position = Vector2(-97, 488)
-
-[node name="Obstacle3" parent="LevelBounds2" instance=ExtResource("2_ar3li")]
-position = Vector2(280, 47)
-
-[node name="Obstacle5" parent="LevelBounds2" node_paths=PackedStringArray("collider") instance=ExtResource("2_ar3li")]
-position = Vector2(-102, -400)
-collider = NodePath("../Obstacle3/CollisionShape2D")
-
-[node name="LevelBounds3" parent="." node_paths=PackedStringArray("nextSection") instance=ExtResource("6_oaxxt")]
-position = Vector2(0, -2461)
-nextSection = NodePath("../LevelBounds2")
-
-[node name="Obstacle4" parent="LevelBounds3" node_paths=PackedStringArray("collider") instance=ExtResource("2_ar3li")]
-position = Vector2(-87, 183)
-collider = NodePath("../../LevelBounds2/Obstacle3/CollisionShape2D")
-
-[node name="Obstacle6" parent="LevelBounds3" node_paths=PackedStringArray("collider") instance=ExtResource("2_ar3li")]
-position = Vector2(268, -472)
-collider = NodePath("../../LevelBounds2/Obstacle3/CollisionShape2D")
-
-[node name="Player" parent="." instance=ExtResource("1_dhslj")]
-speed = 450.0
-maxLife = 5.0
-
-[node name="Bullet" type="Node2D" parent="."]
-script = ExtResource("6_xy651")
+[node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_kaeas")]
+position = Vector2(423, -17)
+speed = 298.0
+target = NodePath("../CharacterBody2D")

@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1th7hougk14t"]
+
+[ext_resource type="Script" path="res://Scripts/HealthSystem.gd" id="1_r2jfr"]
+[ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_we4xy"]
+[ext_resource type="Texture2D" uid="uid://c3wqboyt71syu" path="res://Assets/Tanks_Atlas_test.png" id="2_2o0hv"]
+[ext_resource type="Script" path="res://Scripts/Turret.gd" id="4_e7uxf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldeju"]
+size = Vector2(87, 101)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcfph"]
+atlas = ExtResource("2_2o0hv")
+region = Rect2(640.964, 922.811, 343.654, 386.655)
+
+[node name="Enemy" type="CharacterBody2D"]
+script = ExtResource("1_we4xy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_ldeju")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = SubResource("AtlasTexture_qcfph")
+
+[node name="HealthSystem" type="Node" parent="."]
+script = ExtResource("1_r2jfr")
+
+[node name="Turret" type="Node2D" parent="." node_paths=PackedStringArray("Cannon1", "Cannon2")]
+script = ExtResource("4_e7uxf")
+Cannon1 = NodePath("Cannon1")
+Cannon2 = NodePath("Cannon2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Turret"]
+rotation = 1.5708
+scale = Vector2(0.25, 0.265)
+texture = ExtResource("2_2o0hv")
+offset = Vector2(0, -78)
+region_enabled = true
+region_rect = Rect2(1091, 885, 157, 329)
+
+[node name="Cannon1" type="Node2D" parent="Turret"]
+position = Vector2(7, -59)
+
+[node name="Cannon2" type="Node2D" parent="Turret"]
+position = Vector2(-7, -59)

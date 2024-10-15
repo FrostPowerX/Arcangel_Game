@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpiikhxiv258g"]
+
+[ext_resource type="Script" path="res://Scripts/Turret.gd" id="1_p6631"]
+[ext_resource type="Texture2D" uid="uid://c3wqboyt71syu" path="res://Assets/Tanks_Atlas_test.png" id="2_xftuh"]
+
+[node name="Turret" type="Node2D" node_paths=PackedStringArray("Cannon1", "Cannon2")]
+script = ExtResource("1_p6631")
+Cannon1 = NodePath("Cannon1")
+Cannon2 = NodePath("Cannon2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.25, 0.265)
+texture = ExtResource("2_xftuh")
+offset = Vector2(0, -78)
+region_enabled = true
+region_rect = Rect2(1091, 885, 157, 329)
+
+[node name="Cannon1" type="Node2D" parent="."]
+position = Vector2(7, -59)
+
+[node name="Cannon2" type="Node2D" parent="."]
+position = Vector2(-7, -59)
