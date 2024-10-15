@@ -4,5 +4,5 @@ extends Area2D
 #@onready var collider = $CollisionShape2D
 
 func _on_body_entered(body):
-	body.TakeDamage(damage)
+	body.HealthSystem.TakeDamage(damage)
 	#die and animate
