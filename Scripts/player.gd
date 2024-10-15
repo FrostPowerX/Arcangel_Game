@@ -20,7 +20,7 @@ func Movement(_delta):
 		useVelMulti = upVelMulti * 0.6
 	else:
 		useVelMulti = upVelMulti
-	
+		
 	velocity = Vector2(directionX * speed, -useVelMulti * speed)
 	#print(velocity)
 

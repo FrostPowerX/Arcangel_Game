@@ -12,10 +12,10 @@ scale = Vector2(0.25, 0.265)
 texture = ExtResource("2_xftuh")
 offset = Vector2(0, -78)
 region_enabled = true
-region_rect = Rect2(1091, 885, 157, 329)
+region_rect = Rect2(1092.95, 885, 151.766, 329)
 
 [node name="Cannon1" type="Node2D" parent="."]
-position = Vector2(7, -59)
+position = Vector2(57, -7)
 
 [node name="Cannon2" type="Node2D" parent="."]
-position = Vector2(-7, -59)
+position = Vector2(57, 7)

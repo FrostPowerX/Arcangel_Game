@@ -9,9 +9,10 @@
 [node name="PlayerCam" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_n8r4t")]
 target = NodePath("../CharacterBody2D")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("1_x0www")]
-
 [node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_kaeas")]
+visible = false
 position = Vector2(423, -17)
 speed = 298.0
 target = NodePath("../CharacterBody2D")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_x0www")]
