@@ -1,15 +1,22 @@
-var rightMuzzlePos : Transform2D
-var leftMuzzlePos : Transform2D
-var bulletDirection : Vector2
+extends Node2D
+
+var direction
+var speed
+
+
 
 func _process(delta):
-	fireBullet()
+	moveBullet(delta)
+	#if (!get_viewport_rect().has_point(position)):
+	#	queue_free()
+	#	print("Bullet deleted")
 
 
-func fireBullet():
-	if(Input.is_action_pressed("fire")):
-		print_debug("Dispare :D")
-		#var bullet = preload("INSERTE_ESCENA_DE_BULLET")
-		#var bulletInstance = bullet.instantiate()
-		#add_child(bulletInstance)
-		#bulletInstance.direction = Vector2.UP
+
+func moveBullet(dt):
+	position += direction * speed * dt
+
+func initializeBullet(p_direction, p_speed, p_pos):
+	direction = p_direction
+	speed = p_speed
+	global_position = p_pos;
