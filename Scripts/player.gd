@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var upVelMulti: float = 1
-@export var speed: float = 600
+@export var speed: float = 0
 @export var maxLife: float= 3
 @export var life: float= maxLife
 
@@ -9,6 +9,10 @@ extends CharacterBody2D
 @onready var camera=$Camera2D
 
 var useVelMulti: float = 0
+
+func _ready() -> void:
+	add_to_group("PlayerGroup")
+
 
 func Movement(_delta):
 	var directionX = Input.get_axis("left","right")
@@ -21,6 +25,8 @@ func Movement(_delta):
 		useVelMulti = upVelMulti
 	
 	velocity = Vector2(directionX * speed, -useVelMulti * speed)
+	
+	
 	#print(velocity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

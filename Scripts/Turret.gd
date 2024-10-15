@@ -1,18 +1,38 @@
 extends Node2D
 
-@export var Cannon1 : Node2D
-@export var Cannon2 : Node2D
-var origin : Vector2 = Vector2.ZERO
+@onready var cannon1 = $Cannon1
+@onready var cannon2 = $Cannon2
+@export var bulletSpeed = 1000
+
 @onready var spriteCannon = $Sprite2D
+var origin : Vector2 = Vector2.ZERO 
+var bullet = preload("res://Scenes/bullet.tscn")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var playerSpeed = get_parent().speed
+	bulletSpeed = bulletSpeed + playerSpeed
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var mousePos = get_viewport().get_mouse_position()
-	var direction = (mousePos - position).normalized()
-	spriteCannon.look_at(get_global_mouse_position())
-	spriteCannon.rotate(1.5)
-	
+	cannonUpdate()
+	getFireInput()
+
+
+func cannonUpdate():
+	var mousePos = get_global_mouse_position()
+	look_at(get_global_mouse_position())
+	rotate(1.5)
+
+func getFireInput():
+	if(Input.is_action_just_released("fire")):
+		#Instancio balas
+		var bulletInstance1 = bullet.instantiate()
+		var bulletInstance2 = bullet.instantiate()
+		
+		# Obtengo la direccion de disparo y seteo:
+		# Direccion, velocidad y posicion
+		var direction = global_position.direction_to(get_global_mouse_position())
+		bulletInstance1.initializeBullet(direction, bulletSpeed, cannon1.global_position)
+		bulletInstance2.initializeBullet(direction, bulletSpeed, cannon2.global_position)
+		
+		get_parent().add_child(bulletInstance1)
+		get_parent().add_child(bulletInstance2)

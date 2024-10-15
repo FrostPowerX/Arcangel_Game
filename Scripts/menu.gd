@@ -5,10 +5,12 @@ var creditsButton : Button
 var quitButton : Button
 
 func _ready():
-	pass # 
+	
+	pass 
 
 
 func _process(delta):
+	
 	pass
 
 

@@ -1,8 +1,3 @@
-res://Scenes/menu.tscn
-res://Tilemaps/metal_level.tres
-res://Scenes/level_bounds.tscn
-res://Scenes/obstacle.tscn
-res://Scenes/player.tscn
-res://Scenes/player_cam.tscn
 res://Scenes/test.tscn
-res://Scenes/wall.tscn
+res://Tilemaps/metal_level.tres
+res://Scripts/enemy_1.gd
