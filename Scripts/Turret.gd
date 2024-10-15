@@ -1,7 +1,7 @@
 extends Node2D
 
-@export var Cannon1 : Node2D
-@export var Cannon2 : Node2D
+@export var cannon1 : Node2D
+@export var cannon2 : Node2D
 @export var trackMouse : bool = false
 @export var bulletSpeed = 1000
 

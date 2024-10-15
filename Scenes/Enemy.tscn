@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://7rr23we13lef"]
+[gd_scene load_steps=7 format=3 uid="uid://bsdisarddk0vg"]
 
 [ext_resource type="Script" path="res://Scripts/HealthSystem.gd" id="1_r2jfr"]
 [ext_resource type="Script" path="res://Scripts/Enemy.gd" id="1_we4xy"]
@@ -26,10 +26,8 @@ texture = SubResource("AtlasTexture_qcfph")
 [node name="HealthSystem" type="Node" parent="."]
 script = ExtResource("1_r2jfr")
 
-[node name="Turret" type="Node2D" parent="." node_paths=PackedStringArray("Cannon1", "Cannon2")]
+[node name="Turret" type="Node2D" parent="."]
 script = ExtResource("4_e7uxf")
-Cannon1 = NodePath("Cannon1")
-Cannon2 = NodePath("Cannon2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Turret"]
 rotation = 1.5708

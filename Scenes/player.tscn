@@ -24,10 +24,8 @@ texture = SubResource("AtlasTexture_iu8gf")
 [node name="HealthSystem" type="Node" parent="."]
 script = ExtResource("3_w2vgo")
 
-[node name="Turret" type="Node2D" parent="." node_paths=PackedStringArray("Cannon1", "Cannon2")]
+[node name="Turret" type="Node2D" parent="."]
 script = ExtResource("3_1dloa")
-Cannon1 = NodePath("Cannon1")
-Cannon2 = NodePath("Cannon2")
 trackMouse = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Turret"]
