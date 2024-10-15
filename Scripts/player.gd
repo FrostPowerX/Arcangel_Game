@@ -1,19 +1,16 @@
 extends CharacterBody2D
 
 @export var upVelMulti: float = 1
-@export var speed: float = 0
-@export var maxLife: float= 3
-@export var life: float= maxLife
+@export var speed: float = 600
 
-@onready var sprite=$Sprite2D
-@onready var camera=$Camera2D
+@onready var health_system: Node = $HealthSystem
 
 var useVelMulti: float = 0
 
-func _ready() -> void:
-	add_to_group("PlayerGroup")
-
-
+func _process(_delta):
+	if(!health_system.IsAlive()):
+		Die()
+	
 func Movement(_delta):
 	var directionX = Input.get_axis("left","right")
 	
@@ -23,21 +20,13 @@ func Movement(_delta):
 		useVelMulti = upVelMulti * 0.6
 	else:
 		useVelMulti = upVelMulti
-	
 	velocity = Vector2(directionX * speed, -useVelMulti * speed)
-	
+	#print(velocity)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta):
 	Movement(_delta)
 	move_and_slide()
 
-func TakeDamage(dmg):
-	life -= dmg
-	print(life)
-	if (life <= 0):
-		Die()
-
 func Die():
-	queue_free()
-	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
+	hide()
