@@ -1,31 +1,26 @@
 extends Node2D
 
-@export var Cannon1 : Node2D
-@export var Cannon2 : Node2D
-@export var trackMouse : bool = false
+@onready var cannon1 = $Cannon1
+@onready var cannon2 = $Cannon2
 @export var bulletSpeed = 1000
 
 @onready var spriteCannon = $Sprite2D
-
 var origin : Vector2 = Vector2.ZERO
 var bullet = preload("res://Scenes/bullet.tscn")
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	var playerSpeed = get_parent().speed
 	bulletSpeed = bulletSpeed + playerSpeed
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta):
 	cannonUpdate()
 	getFireInput()
 
 
 func cannonUpdate():
-	if(trackMouse):
-		look_at(get_global_mouse_position())
-	else:
-		look_at(get_parent().GetTarget().position)
+	var mousePos = get_global_mouse_position()
+	look_at(get_global_mouse_position())
+	rotate(1.5)
 
 func getFireInput():
 	if(Input.is_action_just_released("fire")):
