@@ -16,7 +16,8 @@ func _process(delta):
 func moveBullet(dt):
 	position += direction * speed * dt
 
-func initializeBullet(p_direction, p_speed, p_pos, b_speed):
+func initializeBullet(p_direction, p_speed, p_pos):
 	direction = p_direction
-	speed = p_speed + b_speed
+	look_at(direction);
+	speed = p_speed
 	global_position = p_pos
