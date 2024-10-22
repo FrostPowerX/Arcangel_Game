@@ -21,8 +21,7 @@ func GetMaxHealth() -> float:
 	return maxHealth
 
 func TakeDamage(dmg: float):
-	currentHealth -= dmg if dmg > currentHealth else currentHealth
-	pass
+	currentHealth -= dmg if dmg < currentHealth else currentHealth
 
 func IsAlive() -> bool:
 	return (currentHealth > 0)

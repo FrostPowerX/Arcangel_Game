@@ -14,6 +14,7 @@ size = Vector2(240.938, 21.2086)
 position = Vector2(-0.999985, -16)
 scale = Vector2(1.53392, 2.64)
 script = ExtResource("1_fsoq2")
+damage = 25.0
 collider = NodePath("CollisionShape2D")
 
 [node name="Icon9" type="Sprite2D" parent="."]

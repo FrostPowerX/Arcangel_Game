@@ -12,7 +12,7 @@ region = Rect2(641, 922, 343, 388)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbpi3"]
 size = Vector2(86, 104)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["WithHealth"]]
 script = ExtResource("1_5bg3o")
 speed = 300.0
 
