@@ -33,8 +33,8 @@ func getFireInput():
 		# Obtengo la direccion de disparo y seteo:
 		# Direccion, velocidad y posicion
 		var direction = global_position.direction_to(get_global_mouse_position())
-		bulletInstance1.initializeBullet(direction, bulletSpeed, cannon1.global_position)
-		bulletInstance2.initializeBullet(direction, bulletSpeed, cannon2.global_position)
+		bulletInstance1.initializeBullet(direction, bulletSpeed, cannon1.global_position, get_parent().GetSpeed())
+		bulletInstance2.initializeBullet(direction, bulletSpeed, cannon2.global_position, get_parent().GetSpeed())
 		
-		get_parent().add_child(bulletInstance1)
-		get_parent().add_child(bulletInstance2)
+		get_parent().get_parent().add_child(bulletInstance1)
+		get_parent().get_parent().add_child(bulletInstance2)

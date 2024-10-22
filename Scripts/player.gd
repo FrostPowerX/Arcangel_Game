@@ -33,5 +33,8 @@ func Movement(_delta):
 func _physics_process(_delta):
 	Movement(_delta)
 
+func GetSpeed() -> float:
+	return speed
+
 func Die():
 	hide()
