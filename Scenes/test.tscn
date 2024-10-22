@@ -69,8 +69,6 @@ position = Vector2(-297, -2148)
 collider = NodePath("../Obstacle3/CollisionShape2D")
 
 [node name="Player" parent="." instance=ExtResource("1_dhslj")]
-speed = 100.0
-maxLife = 5.0
 
 [node name="Enemy_1" parent="." instance=ExtResource("6_0io31")]
 position = Vector2(-2, -365)

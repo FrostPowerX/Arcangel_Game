@@ -3,7 +3,6 @@ extends Node2D
 @onready var cannon1: Node2D = $Cannon1
 @onready var cannon2: Node2D = $Cannon2
 
-@export var trackMouse : bool = false
 @export var bulletSpeed = 1000
 
 var origin : Vector2 = Vector2.ZERO
@@ -19,10 +18,7 @@ func _process(delta):
 
 
 func cannonUpdate():
-	if(trackMouse):
-		look_at(get_global_mouse_position())
-	else:
-		look_at(get_parent().GetTarget().position)
+	look_at(get_parent().get_global_mouse_position())
 
 func getFireInput():
 	if(Input.is_action_just_released("fire")):

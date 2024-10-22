@@ -10,7 +10,7 @@ func _ready():
 	screen_width = get_viewport().size.x
 	var player = get_tree().get_nodes_in_group("PlayerGroup")[0]
 	player_speed = player.speed
-	
+
 
 func _process(delta):
 	print(global_position.x)

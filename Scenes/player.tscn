@@ -21,6 +21,7 @@ scale = Vector2(0.244186, 0.2595)
 texture = SubResource("AtlasTexture_iu8gf")
 
 [node name="Turret" type="Node2D" parent="."]
+rotation = -0.0023128
 script = ExtResource("3_1dloa")
 
 [node name="Sprite2D" type="Sprite2D" parent="Turret"]
@@ -31,10 +32,10 @@ region_enabled = true
 region_rect = Rect2(1088, 864, 164, 356)
 
 [node name="Cannon1" type="Node2D" parent="Turret"]
-position = Vector2(7, -59)
+position = Vector2(7, -43)
 
 [node name="Cannon2" type="Node2D" parent="Turret"]
-position = Vector2(-7, -59)
+position = Vector2(-7, -43)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_nbpi3")

@@ -1,0 +1,7 @@
+res://Scenes/menu.tscn
+res://Tilemaps/metal_level.tres
+res://Scenes/test.tscn
+res://Scenes/player.tscn
+res://Scripts/player.gd
+res://Scripts/Turret.gd
+res://Scripts/enemy_1.gd
