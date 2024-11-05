@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 var direction
 var speed
@@ -26,3 +26,9 @@ func initializeBullet(p_direction, p_speed, p_pos):
 	look_at(direction);
 	speed = p_speed
 	global_position = p_pos
+
+func _on_body_entered(body):		
+	if (body.is_in_group("WithHealth")) :
+		body.TakeDamage(1)
+	#die and animate
+	queue_free();

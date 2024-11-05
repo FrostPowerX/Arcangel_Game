@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://cltotca48evgj"]
+[gd_scene load_steps=4 format=3 uid="uid://cltotca48evgj"]
 
 [ext_resource type="Script" path="res://Scripts/Bullet.gd" id="1_5qp8t"]
-[ext_resource type="Texture2D" uid="uid://bl6bwrcuvtmt8" path="res://Assets/Medium_Shell.png" id="2_h5nk7"]
+[ext_resource type="Texture2D" uid="uid://cu06p3cgfyse2" path="res://Assets/Medium_Shell.png" id="2_h5nk7"]
 
-[node name="Bullet" type="Node2D"]
-scale = Vector2(0.3, 0.3)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xt8qu"]
+size = Vector2(46.6667, 20)
+
+[node name="Area2D" type="Area2D"]
 script = ExtResource("1_5qp8t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xt8qu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708
-scale = Vector2(1.29413, 1.29413)
+scale = Vector2(0.388239, 0.388239)
 texture = ExtResource("2_h5nk7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -5,11 +5,17 @@ extends Node2D
 
 @export var trackMouse : bool = false
 @export var bulletSpeed = 300
+@export var fireRate = 0.2
+
+var fireTime
 
 var origin : Vector2 = Vector2.ZERO
 var bullet = preload("res://Scenes/bullet.tscn")
 
 func _ready():
+	fireRate = 0.2
+	fireTime = fireRate
+	
 	if (get_parent().speed):
 		var playerSpeed = get_parent().speed
 		bulletSpeed = bulletSpeed + playerSpeed
@@ -17,6 +23,7 @@ func _ready():
 func _process(delta):
 	cannonUpdate()
 	getFireInput()
+	fireTime -= delta
 
 
 func cannonUpdate():
@@ -35,7 +42,7 @@ func getFireInput():
 		drInit = get_parent().GetTarget().position
 	
 	
-	if(Input.is_action_just_released("fire") || !trackMouse):
+	if((Input.is_action_just_released("fire") || !trackMouse) && fireTime <= 0):
 		#Instancio balas
 		var bulletInstance1 = bullet.instantiate()
 		var bulletInstance2 = bullet.instantiate()
@@ -48,3 +55,5 @@ func getFireInput():
 		
 		get_parent().get_parent().add_child(bulletInstance1)
 		get_parent().get_parent().add_child(bulletInstance2)
+		
+		fireTime = fireRate

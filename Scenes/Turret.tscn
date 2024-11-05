@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3nh0p3oembna"]
 
 [ext_resource type="Script" path="res://Scripts/Turret.gd" id="1_p6631"]
-[ext_resource type="Texture2D" uid="uid://cvgh4l8i6jf1d" path="res://Assets/Gun_07.png" id="2_wqh07"]
+[ext_resource type="Texture2D" uid="uid://d370xf8cierhr" path="res://Assets/Gun_07.png" id="2_wqh07"]
 
 [sub_resource type="Animation" id="Animation_l2um7"]
 resource_name = "turret_anim"
