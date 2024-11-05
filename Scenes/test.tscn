@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ca1k2a3di42f2"]
+[gd_scene load_steps=8 format=3 uid="uid://ca1k2a3di42f2"]
 
 [ext_resource type="PackedScene" uid="uid://dhqk21ty3aehy" path="res://Scenes/player.tscn" id="1_cvm0a"]
 [ext_resource type="Script" path="res://Scenes/test.gd" id="1_x33w6"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dusesybhck4nd" path="res://Scenes/obstacle.tscn" id="3_6xoj0"]
 [ext_resource type="Texture2D" uid="uid://c5ifudh3s5d3g" path="res://background2.png" id="3_aprvg"]
 [ext_resource type="PackedScene" uid="uid://bsdisarddk0vg" path="res://Scenes/Enemy.tscn" id="6_3m8mt"]
+[ext_resource type="PackedScene" uid="uid://bxchour5mecyt" path="res://Scenes/enemy_1.tscn" id="8_s4qhl"]
 
 [node name="raiz" type="Node2D"]
 script = ExtResource("1_x33w6")
@@ -22,7 +23,15 @@ position = Vector2(400, 400)
 scale = Vector2(1, 1.721)
 
 [node name="Obstacle" parent="Obstacle" instance=ExtResource("3_6xoj0")]
-position = Vector2(0, 0)
+position = Vector2(-83, -66.8216)
+scale = Vector2(1, 1)
+
+[node name="Obstacle2" type="Node2D" parent="."]
+position = Vector2(400, 400)
+scale = Vector2(1, 1.721)
+
+[node name="Obstacle" parent="Obstacle2" instance=ExtResource("3_6xoj0")]
+position = Vector2(488, -94.7124)
 scale = Vector2(1, 1)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -34,6 +43,9 @@ motion_mirroring = Vector2(0, 648)
 scale = Vector2(0.588595, 0.6)
 texture = ExtResource("3_aprvg")
 centered = false
+metadata/_edit_lock_ = true
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("target") instance=ExtResource("6_3m8mt")]
 target = NodePath("../CharacterBody2D")
+
+[node name="Enemy_1" parent="." instance=ExtResource("8_s4qhl")]
