@@ -1,6 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://fvlyukwwf1oh"]
+[gd_scene load_steps=11 format=3 uid="uid://fvlyukwwf1oh"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_xixwc"]
+[ext_resource type="Texture2D" uid="uid://co4afgoqccsdo" path="res://Assets/play button.png" id="2_t08jo"]
+[ext_resource type="Texture2D" uid="uid://dan67ym43t3a5" path="res://Assets/background_menu.png" id="2_yxo1k"]
+[ext_resource type="Texture2D" uid="uid://c1gawgvmv58jj" path="res://Assets/credits button.png" id="4_jtbvl"]
+[ext_resource type="Texture2D" uid="uid://cvh0k2i2eheev" path="res://Assets/quit button.png" id="5_ulylc"]
+
+[sub_resource type="Theme" id="Theme_1veld"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vupjg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t8xir"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j0na2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gm4vf"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -11,35 +25,51 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_xixwc")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -129.0
-offset_top = 50.0
-offset_right = 130.0
-offset_bottom = 258.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
-
-[node name="StartButton" type="Button" parent="VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-text = "Start"
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_yxo1k")
+expand_mode = 3
+
+[node name="StartButton" type="Button" parent="."]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+offset_left = 632.0
+offset_top = 321.0
+offset_right = 1189.0
+offset_bottom = 471.0
+scale = Vector2(0.755, 0.81)
+size_flags_stretch_ratio = 0.36
+theme = SubResource("Theme_1veld")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vupjg")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_t8xir")
+icon = ExtResource("2_t08jo")
 icon_alignment = 1
 
-[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+[node name="CreditsButton" type="Button" parent="."]
 layout_mode = 2
-text = "Credits"
+offset_left = 672.0
+offset_top = 437.0
+offset_right = 1175.0
+offset_bottom = 566.0
+scale = Vector2(0.685, 0.745)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j0na2")
+icon = ExtResource("4_jtbvl")
 icon_alignment = 1
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" type="Button" parent="."]
 layout_mode = 2
-text = "Quit"
+offset_left = 727.0
+offset_top = 537.0
+offset_right = 1087.0
+offset_bottom = 635.0
+scale = Vector2(0.665, 0.685)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_gm4vf")
+icon = ExtResource("5_ulylc")
 icon_alignment = 1
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="StartGame"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="QuitGame"]
+[connection signal="pressed" from="StartButton" to="." method="StartGame"]
+[connection signal="pressed" from="QuitButton" to="." method="QuitGame"]

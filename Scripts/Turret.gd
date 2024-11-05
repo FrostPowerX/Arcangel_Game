@@ -10,8 +10,9 @@ var origin : Vector2 = Vector2.ZERO
 var bullet = preload("res://Scenes/bullet.tscn")
 
 func _ready():
-	var playerSpeed = get_parent().speed
-	bulletSpeed = bulletSpeed + playerSpeed
+	if (get_parent().speed):
+		var playerSpeed = get_parent().speed
+		bulletSpeed = bulletSpeed + playerSpeed
 
 func _process(delta):
 	cannonUpdate()
@@ -25,14 +26,23 @@ func cannonUpdate():
 		look_at(get_parent().GetTarget().position)
 
 func getFireInput():
-	if(Input.is_action_just_released("fire")):
+	
+	var drInit
+	
+	if(trackMouse):
+		drInit = get_global_mouse_position()
+	else:
+		drInit = get_parent().GetTarget().position
+	
+	
+	if(Input.is_action_just_released("fire") || !trackMouse):
 		#Instancio balas
 		var bulletInstance1 = bullet.instantiate()
 		var bulletInstance2 = bullet.instantiate()
 		
 		# Obtengo la direccion de disparo y seteo:
 		# Direccion, velocidad y posicion
-		var direction = global_position.direction_to(get_global_mouse_position())
+		var direction = global_position.direction_to(drInit)
 		bulletInstance1.initializeBullet(direction, bulletSpeed, cannon1.global_position)
 		bulletInstance2.initializeBullet(direction, bulletSpeed, cannon2.global_position)
 		

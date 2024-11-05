@@ -1,21 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5vsdxycjr6ig"]
+[gd_scene load_steps=3 format=3 uid="uid://b5vsdxycjr6ig"]
 
 [ext_resource type="Script" path="res://Scripts/level_bounds.gd" id="1_lpmkv"]
-[ext_resource type="PackedScene" uid="uid://cen4rggqn8jpn" path="res://Scenes/wall.tscn" id="1_psatj"]
 [ext_resource type="Script" path="res://Scripts/OnCameraCheck.gd" id="2_13wuc"]
 
 [node name="LevelBounds" type="Node2D"]
 script = ExtResource("1_lpmkv")
 
-[node name="leftWall" parent="." instance=ExtResource("1_psatj")]
-position = Vector2(-544, 0)
-rotation = 3.14159
-
-[node name="rightWall" parent="." instance=ExtResource("1_psatj")]
-
 [node name="OnCameraCheck" type="VisibleOnScreenNotifier2D" parent="." node_paths=PackedStringArray("parent")]
-position = Vector2(-6, 3.00003)
-scale = Vector2(53, 60.5)
+position = Vector2(576.5, 43.4999)
+scale = Vector2(57.45, 61.15)
 script = ExtResource("2_13wuc")
 parent = NodePath("..")
 

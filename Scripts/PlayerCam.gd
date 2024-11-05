@@ -1,9 +1,9 @@
 extends Camera2D
 
-@export var target = CharacterBody2D
-@onready var offSet: float = 150.0
+@export var target: CharacterBody2D
+@export var offset_y: float = 150.0
 
-
-# Called when the node enters the scene tree for the first time.
-func _process(_delta):
-	position.y = target.position.y - offSet 
+func _physics_process(_delta):
+	if target:
+		# Sigue la posición del jugador en el eje Y únicamente
+		position.y = target.position.y - offset_y

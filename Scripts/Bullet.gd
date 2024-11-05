@@ -2,11 +2,16 @@ extends Node2D
 
 var direction
 var speed
+var timeAlive 
 
-
-
+func _ready() -> void:
+	timeAlive = 5.0
+	
 func _process(delta):
 	moveBullet(delta)
+	timeAlive -= delta
+	if(timeAlive <= 0):
+		queue_free()
 	#if (!get_viewport_rect().has_point(position)):
 	#	queue_free()
 	#	print("Bullet deleted")

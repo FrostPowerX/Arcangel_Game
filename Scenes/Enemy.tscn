@@ -38,7 +38,7 @@ region_enabled = true
 region_rect = Rect2(1091, 885, 157, 329)
 
 [node name="Cannon1" type="Node2D" parent="Turret"]
-position = Vector2(7, -59)
+position = Vector2(67, 7)
 
 [node name="Cannon2" type="Node2D" parent="Turret"]
-position = Vector2(-7, -59)
+position = Vector2(67, -6)
