@@ -1,15 +1,16 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhqk21ty3aehy"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_5bg3o"]
-[ext_resource type="Texture2D" uid="uid://cosj6qwa7bnb7" path="res://Assets/tank.png" id="2_kahna"]
+[ext_resource type="Texture2D" uid="uid://cbqhfpqjghqqn" path="res://Assets/tank.png" id="2_kahna"]
 [ext_resource type="Script" path="res://Scripts/HealthSystem.gd" id="3_w2vgo"]
 [ext_resource type="PackedScene" uid="uid://c3nh0p3oembna" path="res://Scenes/Turret.tscn" id="4_gr3au"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbpi3"]
 size = Vector2(109, 135)
 
-[node name="CharacterBody2D" type="CharacterBody2D" groups=["WithHealth"]]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Enemy", "WithHealth"]]
 position = Vector2(593, 566)
+collision_layer = 3
 script = ExtResource("1_5bg3o")
 speed = 300.0
 
@@ -23,6 +24,8 @@ script = ExtResource("3_w2vgo")
 
 [node name="Turret" parent="." instance=ExtResource("4_gr3au")]
 trackMouse = true
+layer = 2
+damage = 50
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -16.5)

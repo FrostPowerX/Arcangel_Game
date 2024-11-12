@@ -12,7 +12,8 @@ size = Vector2(87, 101)
 atlas = ExtResource("2_2o0hv")
 region = Rect2(640.964, 922.811, 343.654, 386.655)
 
-[node name="Enemy" type="CharacterBody2D"]
+[node name="Enemy" type="CharacterBody2D" groups=["WithHealth"]]
+collision_layer = 5
 script = ExtResource("1_we4xy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,6 +29,8 @@ script = ExtResource("1_r2jfr")
 
 [node name="Turret" type="Node2D" parent="."]
 script = ExtResource("4_e7uxf")
+fireRate = 2.0
+layer = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="Turret"]
 rotation = 1.5708

@@ -1,12 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://cltotca48evgj"]
 
 [ext_resource type="Script" path="res://Scripts/Bullet.gd" id="1_5qp8t"]
-[ext_resource type="Texture2D" uid="uid://cu06p3cgfyse2" path="res://Assets/Medium_Shell.png" id="2_h5nk7"]
+[ext_resource type="Texture2D" uid="uid://c8juh51g81t7b" path="res://Assets/Medium_Shell.png" id="2_h5nk7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xt8qu"]
 size = Vector2(46.6667, 20)
 
 [node name="Area2D" type="Area2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_5qp8t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

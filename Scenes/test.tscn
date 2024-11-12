@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scenes/test.gd" id="1_x33w6"]
 [ext_resource type="PackedScene" uid="uid://c5hhhva1lacp3" path="res://Scenes/player_cam.tscn" id="2_l0wua"]
 [ext_resource type="PackedScene" uid="uid://dusesybhck4nd" path="res://Scenes/obstacle.tscn" id="3_6xoj0"]
-[ext_resource type="Texture2D" uid="uid://c5ifudh3s5d3g" path="res://background2.png" id="3_aprvg"]
+[ext_resource type="Texture2D" uid="uid://b6grppusss864" path="res://background2.png" id="3_aprvg"]
 [ext_resource type="PackedScene" uid="uid://bsdisarddk0vg" path="res://Scenes/Enemy.tscn" id="6_3m8mt"]
 [ext_resource type="PackedScene" uid="uid://bxchour5mecyt" path="res://Scenes/enemy_1.tscn" id="8_s4qhl"]
 

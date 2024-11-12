@@ -36,5 +36,19 @@ func _physics_process(_delta):
 func GetSpeed() -> float:
 	return speed
 
+func desactivar_nodo_y_hijos(nodo: Node):
+	# Desactivar el procesamiento del nodo actual
+	nodo.set_process(false)
+	nodo.set_physics_process(false)
+
 func Die():
+	for child in get_children():
+		desactivar_nodo_y_hijos(child)
+		
+	set_process(false)
+	set_physics_process(false)
+	
+	collision_layer = 0
+	collision_mask = 0
+	
 	hide()

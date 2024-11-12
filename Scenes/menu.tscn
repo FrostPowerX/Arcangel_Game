@@ -1,10 +1,10 @@
 [gd_scene load_steps=11 format=3 uid="uid://fvlyukwwf1oh"]
 
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_xixwc"]
-[ext_resource type="Texture2D" uid="uid://cq46xl4oi1j2h" path="res://Assets/play button.png" id="2_t08jo"]
-[ext_resource type="Texture2D" uid="uid://s7twv1jjskrh" path="res://Assets/background_menu.png" id="2_yxo1k"]
-[ext_resource type="Texture2D" uid="uid://dck4jrumb8878" path="res://Assets/credits button.png" id="4_jtbvl"]
-[ext_resource type="Texture2D" uid="uid://cgynefgv8spxf" path="res://Assets/quit button.png" id="5_ulylc"]
+[ext_resource type="Texture2D" uid="uid://csjcdim1d1f63" path="res://Assets/play button.png" id="2_t08jo"]
+[ext_resource type="Texture2D" uid="uid://dx1r8alxhxhgk" path="res://Assets/background_menu.png" id="2_yxo1k"]
+[ext_resource type="Texture2D" uid="uid://cyyw48vogma1p" path="res://Assets/credits button.png" id="4_jtbvl"]
+[ext_resource type="Texture2D" uid="uid://br5u0uo3juyah" path="res://Assets/quit button.png" id="5_ulylc"]
 
 [sub_resource type="Theme" id="Theme_1veld"]
 

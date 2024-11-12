@@ -4,8 +4,10 @@ extends Node2D
 @onready var cannon2: Node2D = $Cannon2
 
 @export var trackMouse : bool = false
-@export var bulletSpeed = 300
-@export var fireRate = 0.2
+@export var bulletSpeed : float = 300
+@export var fireRate : float = 0.2
+@export var layer : int = 0
+@export var damage : int = 20
 
 var fireTime
 
@@ -13,7 +15,6 @@ var origin : Vector2 = Vector2.ZERO
 var bullet = preload("res://Scenes/bullet.tscn")
 
 func _ready():
-	fireRate = 0.2
 	fireTime = fireRate
 	
 	if (get_parent().speed):
@@ -47,11 +48,14 @@ func getFireInput():
 		var bulletInstance1 = bullet.instantiate()
 		var bulletInstance2 = bullet.instantiate()
 		
+		bulletInstance1.SetLayerColision(layer)
+		bulletInstance2.SetLayerColision(layer)
+		
 		# Obtengo la direccion de disparo y seteo:
 		# Direccion, velocidad y posicion
 		var direction = global_position.direction_to(drInit)
-		bulletInstance1.initializeBullet(direction, bulletSpeed, cannon1.global_position)
-		bulletInstance2.initializeBullet(direction, bulletSpeed, cannon2.global_position)
+		bulletInstance1.initializeBullet(direction, bulletSpeed, cannon1.global_position, damage)
+		bulletInstance2.initializeBullet(direction, bulletSpeed, cannon2.global_position, damage)
 		
 		get_parent().get_parent().add_child(bulletInstance1)
 		get_parent().get_parent().add_child(bulletInstance2)
