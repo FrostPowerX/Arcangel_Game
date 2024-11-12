@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://ca1k2a3di42f2"]
+[gd_scene load_steps=9 format=3 uid="uid://ca1k2a3di42f2"]
 
 [ext_resource type="PackedScene" uid="uid://dhqk21ty3aehy" path="res://Scenes/player.tscn" id="1_cvm0a"]
-[ext_resource type="Script" path="res://Scenes/test.gd" id="1_x33w6"]
+[ext_resource type="Script" path="res://Scripts/test.gd" id="1_x33w6"]
 [ext_resource type="PackedScene" uid="uid://c5hhhva1lacp3" path="res://Scenes/player_cam.tscn" id="2_l0wua"]
 [ext_resource type="PackedScene" uid="uid://dusesybhck4nd" path="res://Scenes/obstacle.tscn" id="3_6xoj0"]
-[ext_resource type="Texture2D" uid="uid://c5ifudh3s5d3g" path="res://background2.png" id="3_aprvg"]
+[ext_resource type="Texture2D" uid="uid://b6grppusss864" path="res://background2.png" id="3_aprvg"]
 [ext_resource type="PackedScene" uid="uid://bsdisarddk0vg" path="res://Scenes/Enemy.tscn" id="6_3m8mt"]
+[ext_resource type="PackedScene" uid="uid://br2ggeqhjakt8" path="res://Scenes/consumable.tscn" id="8_4i7l0"]
 [ext_resource type="PackedScene" uid="uid://bxchour5mecyt" path="res://Scenes/enemy_1.tscn" id="8_s4qhl"]
 
 [node name="raiz" type="Node2D"]
@@ -49,3 +50,7 @@ metadata/_edit_lock_ = true
 target = NodePath("../CharacterBody2D")
 
 [node name="Enemy_1" parent="." instance=ExtResource("8_s4qhl")]
+
+[node name="Consumable" parent="." instance=ExtResource("8_4i7l0")]
+
+[connection signal="body_entered" from="Consumable" to="Consumable" method="_on_body_entered"]

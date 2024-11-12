@@ -2,9 +2,12 @@ extends CharacterBody2D
 
 @export var upVelMulti: float = 1
 @export var speed: float = 600
-
+@onready var score_system: Node2D = $ScoreSystem
 @onready var health_system: Node = $HealthSystem
 var useVelMulti: float = 0
+
+func AddScore():
+	score_system.Add();
 
 func TakeDamage(damage):
 	health_system.TakeDamage(damage)
