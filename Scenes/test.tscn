@@ -52,5 +52,14 @@ target = NodePath("../CharacterBody2D")
 [node name="Enemy_1" parent="." instance=ExtResource("8_s4qhl")]
 
 [node name="Consumable" parent="." instance=ExtResource("8_4i7l0")]
+position = Vector2(198, -71)
+
+[node name="Consumable2" parent="." instance=ExtResource("8_4i7l0")]
+position = Vector2(408, -75)
+
+[node name="Consumable3" parent="." instance=ExtResource("8_4i7l0")]
+position = Vector2(565, -83)
 
 [connection signal="body_entered" from="Consumable" to="Consumable" method="_on_body_entered"]
+[connection signal="body_entered" from="Consumable2" to="Consumable2" method="_on_body_entered"]
+[connection signal="body_entered" from="Consumable3" to="Consumable3" method="_on_body_entered"]
