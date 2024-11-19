@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckyxoslhhyugp"]
+
+[ext_resource type="Texture2D" uid="uid://bvg67unj0g1bf" path="res://Assets/Intrucciones.png" id="1_xyiu0"]
+[ext_resource type="Texture2D" uid="uid://3b2snays5div" path="res://Assets/play2.png" id="2_m8t7i"]
+
+[node name="Instruction" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.00087
+anchor_bottom = 0.998457
+texture = ExtResource("1_xyiu0")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+anchor_left = 0.647569
+anchor_top = 0.780864
+anchor_right = 0.934028
+anchor_bottom = 0.932099
+icon = ExtResource("2_m8t7i")
+metadata/_edit_use_anchors_ = true

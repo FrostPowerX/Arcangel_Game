@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ds278u80elvbm"]
+
+[ext_resource type="Texture2D" uid="uid://c66h4g415dw6x" path="res://Assets/victoria.png" id="1_uexdp"]
+
+[node name="Victory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 650.0
+texture = ExtResource("1_uexdp")
+expand_mode = 1

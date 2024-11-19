@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpdnmynccocyw"]
+
+[ext_resource type="Texture2D" uid="uid://bn6vbi1jr8qyy" path="res://Assets/Credits.png" id="1_klf5e"]
+[ext_resource type="Texture2D" uid="uid://g78q86i2gdvi" path="res://Assets/back.png" id="2_m7c8q"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.00087
+anchor_bottom = 1.00154
+texture = ExtResource("1_klf5e")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="backButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.685764
+anchor_top = 0.824074
+anchor_right = 0.927083
+anchor_bottom = 0.95216
+icon = ExtResource("2_m7c8q")
+metadata/_edit_use_anchors_ = true

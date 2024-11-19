@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dhqk21ty3aehy"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_5bg3o"]
-[ext_resource type="Texture2D" uid="uid://cbqhfpqjghqqn" path="res://Assets/tank.png" id="2_kahna"]
+[ext_resource type="Texture2D" uid="uid://blp2k4tyn7s7a" path="res://Assets/tank.png" id="2_kahna"]
 [ext_resource type="Script" path="res://Scripts/HealthSystem.gd" id="3_w2vgo"]
 [ext_resource type="PackedScene" uid="uid://c3nh0p3oembna" path="res://Scenes/Turret.tscn" id="4_gr3au"]
 

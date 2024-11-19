@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://cetieiwaefxta"]
+
+[ext_resource type="Texture2D" uid="uid://b3es74vrufgx7" path="res://Assets/Game over.png" id="1_6jkka"]
+[ext_resource type="Texture2D" uid="uid://2wjsdcdcwxcd" path="res://Assets/yes.png" id="2_et2i1"]
+[ext_resource type="Texture2D" uid="uid://cuolaea7mm4hp" path="res://Assets/no.png" id="3_drocw"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_right = 1.00087
+anchor_bottom = 1.0
+texture = ExtResource("1_6jkka")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="yesButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.158854
+anchor_top = 0.631173
+anchor_right = 0.467014
+anchor_bottom = 0.785494
+icon = ExtResource("2_et2i1")
+metadata/_edit_use_anchors_ = true
+
+[node name="noButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.550347
+anchor_top = 0.62963
+anchor_right = 0.858507
+anchor_bottom = 0.783951
+offset_bottom = 3.05176e-05
+icon = ExtResource("3_drocw")
+metadata/_edit_use_anchors_ = true
