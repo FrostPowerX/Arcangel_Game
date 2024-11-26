@@ -2,6 +2,7 @@ extends CharacterBody2D
 class_name Enemy
 @export var speed: float = 300
 @export var target: CharacterBody2D 
+@onready var player_cam: Camera2D = $"../PlayerCam"
 
 @onready var turret: Node2D = $Turret
 @onready var health_system: Node = $HealthSystem
@@ -29,13 +30,14 @@ func desactivar_nodo_y_hijos(nodo: Node):
 	nodo.set_physics_process(false)
 	
 func Die():
-	for child in get_children():
-		desactivar_nodo_y_hijos(child)
-		
-	set_process(false)
-	set_physics_process(false)
 	
-	collision_layer = 0
-	collision_mask = 0
-		
-	hide()
+	var rng = RandomNumberGenerator.new()
+	
+	var size = Vector2(get_viewport().size)
+	position = player_cam.global_position
+	position -= size / 2.0
+	
+	position.x += rng.randf_range(0,size.x)
+	position.y -= 500
+	
+	health_system.SetCurrentHealth(1000)

@@ -1,6 +1,5 @@
-extends Node2D
+extends Control
 
-@onready var character_body_2d: CharacterBody2D = $CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,4 +8,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	
+		if(Input.is_action_just_pressed("back")):
+			get_tree().paused = !get_tree().paused

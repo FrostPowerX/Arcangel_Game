@@ -1,15 +1,26 @@
-[gd_scene load_steps=8 format=3 uid="uid://ca1k2a3di42f2"]
+[gd_scene load_steps=9 format=3 uid="uid://ca1k2a3di42f2"]
 
 [ext_resource type="PackedScene" uid="uid://dhqk21ty3aehy" path="res://Scenes/player.tscn" id="1_cvm0a"]
 [ext_resource type="Script" path="res://Scenes/test.gd" id="1_x33w6"]
 [ext_resource type="PackedScene" uid="uid://c5hhhva1lacp3" path="res://Scenes/player_cam.tscn" id="2_l0wua"]
+[ext_resource type="Script" path="res://Scenes/PauseMenu.gd" id="2_rg0nd"]
 [ext_resource type="PackedScene" uid="uid://dusesybhck4nd" path="res://Scenes/obstacle.tscn" id="3_6xoj0"]
-[ext_resource type="Texture2D" uid="uid://c0yx7fd6ymifa" path="res://background2.png" id="3_aprvg"]
+[ext_resource type="Texture2D" uid="uid://31ibx2katmfn" path="res://background2.png" id="3_aprvg"]
 [ext_resource type="PackedScene" uid="uid://bsdisarddk0vg" path="res://Scenes/Enemy.tscn" id="6_3m8mt"]
 [ext_resource type="PackedScene" uid="uid://bxchour5mecyt" path="res://Scenes/enemy_1.tscn" id="8_s4qhl"]
 
 [node name="raiz" type="Node2D"]
 script = ExtResource("1_x33w6")
+
+[node name="PauseMenu" type="Control" parent="."]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_rg0nd")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_cvm0a")]
 

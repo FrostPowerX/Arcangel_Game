@@ -52,3 +52,5 @@ func Die():
 	collision_mask = 0
 	
 	hide()
+	
+	get_tree().change_scene_to_file("res://Scenes/menu.tscn")
